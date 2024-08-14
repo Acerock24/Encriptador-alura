@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"> <!-- Configuración de codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Habilita el diseño responsivo -->
+    <link rel="icon" href="img/favicon.png" type="image/x-icon"> <!-- Favicon del sitio -->
+    <title>Encriptador</title> <!-- Título de la página -->
+    <link rel="stylesheet" href="styles.css"> <!-- Vinculación del archivo CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- Librería para alertas -->
+</head>
+<body>
+    <div class="main"> <!-- Contenedor principal -->
+        <header> <!-- Encabezado del sitio -->
+            <div class="image2"> <!-- Contenedor de la imagen de cabecera -->
+                <img src="./imagenes/micara.png" alt="Cara de alex en Github" width="146" height="132"> <!-- Imagen de la cabecera -->
+            </div>
+
+            <h2>A PROBAR ESTE ENCRIPTADOR Y DESENCRIPTADOR</h2> <!-- Título de la página -->
+        </header>
+        <div class="content"> <!-- Contenedor de contenido principal -->
+            <div class="left"> <!-- Sección izquierda -->
+                <textarea id="textoEntrada" class="inputText" rows="10" placeholder="Ingrese el texto aqui...."></textarea> <!-- Área de texto para entrada -->
+                <div class="div__alerta"> <!-- Alerta de restricciones de entrada -->
+                    <p>Solo letras minúsculas y sin acentos</p>
+                </div>
+                <div class="buttons"> <!-- Contenedor de botones -->
+
+                    <button class="btn__encriptar" onclick="encriptar()">Encriptar</button> <!-- Botón de encriptar -->
+
+                    <button class="btn__desencriptar" onclick="desencriptar()">Desencriptar</button> <!-- Botón de desencriptar -->
+
+                    <button class="copy_button" onclick="copiarTexto()">Copiar</button> <!-- Botón para copiar texto -->
+                </div>
+            </div>
+            <div class="right"> <!-- Sección derecha -->
+                <div class="image"> <!-- Contenedor de imagen -->
+                    <img id="imagenVacia" src="imagenes/Elprincipito.png" alt="Elprincipito"> <!-- Imagen ilustrativa -->
+                </div>
+                <div class="mensajex">
+                <strong id="mensaje1">Ningún mensaje fue encontrado</strong> <!-- Mensaje de error por defecto -->
+              </div>
+              <div class="mensajexx">
+                <p id="mensaje">Ingresa el texto que desees encriptar o desencriptar.</p> <!-- Mensaje de guía --></div>
+            </div>
+        </div>
+        <footer> <!-- Pie de página -->
+            <div class="footer">
+                <p>PRIMER RETO DEL CURSO "ENCRIPTADOR"</p> <!-- Mensaje de pie de página -->
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script> <!-- Vinculación del archivo JS principal -->
+</body>
+</html>

@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap'); /* Importa la fuente Inter desde Google Fonts */
+
+:root { /* Define variables de colores y fuentes */
+    --color-1: #3a3a3a;
+    --color-2: #989898;
+    --color-3: #3d3d3d;
+    --color-4: #ffffff;
+    --color-background: #000000;
+    --fuente-interna: 'Inter', sans-serif;
+}
+
+body {
+    margin: 0; /* Quita margen por defecto */
+    font-family: var(--fuente-interna); /* Aplica la fuente Inter */
+    background-color: var(--color-background); /* Fondo negro */
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que cubra toda la pantalla */
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    background-color: var(--color-background); /* Fondo negro */
+}
+
+h2 {
+    margin-left: 100px;
+    font-size: 2em;
+    color: var(--color-4); /* Texto blanco */
+}
+
+footer {
+    background-color: var(--color-background); /* Fondo negro */
+    color: var(--color-4); /* Texto blanco */
+    text-align: center;
+    padding: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Permite el ajuste de los elementos */
+}
+
+.left, .right {
+    flex: 1;
+    padding: 1em; /* Espaciado interno */
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 60%;
+}
+
+.inputText {
+    padding: 10px; 
+    font-size: 2em; 
+    border-color: var(--color-1);
+    color: var(--color-2); /* Color gris claro */
+    border-radius: 25px; /* Bordes redondeados */
+    width: 70%; 
+    box-sizing: border-box;
+    margin-left: 150px;
+
+}
+
+.inputText:focus {
+    outline: none; /* Quita el contorno al enfocarse */
+}
+
+.inputText::placeholder {
+    color: var(--color-2); /* Color del placeholder */
+}
+
+.div__alerta {
+    color: gray;
+    margin-left: 200px;
+    font-size: 2em;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around; /* Distribuye los botones */
+}
+
+.btn__encriptar {
+    color: var(--color-4); /* Texto negro */
+    font-size: 16px;
+    padding: 18px 50px; 
+    border-radius: 24px;
+    background: var(--color-3); /* Fondo gris claro */
+    border: solid 2px var(--color-1); /* Borde gris oscuro */
+    width: 23%;
+    transition: transform 0.3s; /* Animación de tamaño */
+    margin-left: 130px ;
+}
+
+.btn__desencriptar {
+    color: var(--color-4); /* Texto negro */
+    font-size: 16px;
+    padding: 18px 50px; 
+    border-radius: 24px;
+    background: var(--color-3); /* Fondo gris claro */
+    border: solid 2px var(--color-1); /* Borde gris oscuro */
+    width: 23%;
+    transition: transform 0.3s; /* Animación de tamaño */
+    margin-right: -5px ;
+}
+
+.copy_button {
+    color: var(--color-4); /* Texto negro */
+    font-size: 16px;
+    padding: 18px 50px; 
+    border-radius: 24px;
+    background: var(--color-3); /* Fondo gris claro */
+    border: solid 2px var(--color-1); /* Borde gris oscuro */
+    width: 23%;
+    transition: transform 0.3s; /* Animación de tamaño */
+    margin-right: 110px ;
+}
+
+.btn__encriptar:hover, .btn__desencriptar:hover, .copy_button:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al hacer clic */
+}
+
+.right {
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image {
+    margin-top: 30px;
+    margin-right: 85px;
+}
+
+.image2 {
+    margin-left: -300px;
+    margin-top: 15px;
+}
+
+
+.footer {
+    font-size: 1em;
+}
+
+.mensajex {
+    color: var(--color-4);
+    margin-right: 50px;
+    margin-top: -355px;
+    width: 300px;
+    height: 100px;
+}
+
+.mensajexx {
+    color:  var(--color-4);
+    margin-right: 85px;
+    margin-top: 350px;
+}
+
+#copyButton {
+    display: none; /* Esconde el botón de copiar por defecto */
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .buttons button {
+        margin-bottom: 0.5em;
+    }
+    .btn__encriptar, .btn__desencriptar {
+        width: 50%;
+    }
+}
